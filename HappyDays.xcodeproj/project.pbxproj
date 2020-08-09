@@ -7,19 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173DBA5824E06F320091A2AB /* MemoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DBA5724E06F320091A2AB /* MemoriesViewModel.swift */; };
+		173DBA5A24E06FDA0091A2AB /* PermissionChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DBA5924E06FDA0091A2AB /* PermissionChecker.swift */; };
+		173DBA5C24E076EC0091A2AB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DBA5B24E076EC0091A2AB /* ImagePicker.swift */; };
+		173DBA5E24E090950091A2AB /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173DBA5D24E090950091A2AB /* Memory.swift */; };
 		17EE54D224DEA4D0008566B1 /* HappyDaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE54D124DEA4D0008566B1 /* HappyDaysApp.swift */; };
 		17EE54D424DEA4D0008566B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE54D324DEA4D0008566B1 /* ContentView.swift */; };
 		17EE54D624DEA4D3008566B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17EE54D524DEA4D3008566B1 /* Assets.xcassets */; };
 		17EE54D924DEA4D3008566B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17EE54D824DEA4D3008566B1 /* Preview Assets.xcassets */; };
+		17EE54E124DEACA4008566B1 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE54E024DEACA4008566B1 /* WelcomeView.swift */; };
+		17EE54E324DEB266008566B1 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE54E224DEB266008566B1 /* SearchField.swift */; };
+		17EE54E524DEB29A008566B1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE54E424DEB29A008566B1 /* Extensions.swift */; };
+		17EE54E724DED917008566B1 /* MemoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE54E624DED917008566B1 /* MemoriesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		173DBA5724E06F320091A2AB /* MemoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesViewModel.swift; sourceTree = "<group>"; };
+		173DBA5924E06FDA0091A2AB /* PermissionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionChecker.swift; sourceTree = "<group>"; };
+		173DBA5B24E076EC0091A2AB /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		173DBA5D24E090950091A2AB /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		17EE54CE24DEA4D0008566B1 /* HappyDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EE54D124DEA4D0008566B1 /* HappyDaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyDaysApp.swift; sourceTree = "<group>"; };
 		17EE54D324DEA4D0008566B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17EE54D524DEA4D3008566B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17EE54D824DEA4D3008566B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		17EE54DA24DEA4D3008566B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17EE54E024DEACA4008566B1 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		17EE54E224DEB266008566B1 /* SearchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
+		17EE54E424DEB29A008566B1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		17EE54E624DED917008566B1 /* MemoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,14 @@
 			children = (
 				17EE54D124DEA4D0008566B1 /* HappyDaysApp.swift */,
 				17EE54D324DEA4D0008566B1 /* ContentView.swift */,
+				173DBA5924E06FDA0091A2AB /* PermissionChecker.swift */,
+				17EE54E024DEACA4008566B1 /* WelcomeView.swift */,
+				173DBA5D24E090950091A2AB /* Memory.swift */,
+				173DBA5724E06F320091A2AB /* MemoriesViewModel.swift */,
+				17EE54E624DED917008566B1 /* MemoriesView.swift */,
+				17EE54E224DEB266008566B1 /* SearchField.swift */,
+				173DBA5B24E076EC0091A2AB /* ImagePicker.swift */,
+				17EE54E424DEB29A008566B1 /* Extensions.swift */,
 				17EE54D524DEA4D3008566B1 /* Assets.xcassets */,
 				17EE54DA24DEA4D3008566B1 /* Info.plist */,
 				17EE54D724DEA4D3008566B1 /* Preview Content */,
@@ -138,8 +162,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173DBA5A24E06FDA0091A2AB /* PermissionChecker.swift in Sources */,
+				17EE54E524DEB29A008566B1 /* Extensions.swift in Sources */,
 				17EE54D424DEA4D0008566B1 /* ContentView.swift in Sources */,
+				173DBA5C24E076EC0091A2AB /* ImagePicker.swift in Sources */,
+				17EE54E124DEACA4008566B1 /* WelcomeView.swift in Sources */,
+				17EE54E324DEB266008566B1 /* SearchField.swift in Sources */,
+				173DBA5824E06F320091A2AB /* MemoriesViewModel.swift in Sources */,
 				17EE54D224DEA4D0008566B1 /* HappyDaysApp.swift in Sources */,
+				173DBA5E24E090950091A2AB /* Memory.swift in Sources */,
+				17EE54E724DED917008566B1 /* MemoriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
