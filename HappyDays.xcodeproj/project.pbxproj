@@ -26,6 +26,7 @@
 		173DBA5924E06FDA0091A2AB /* PermissionChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionChecker.swift; sourceTree = "<group>"; };
 		173DBA5B24E076EC0091A2AB /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		173DBA5D24E090950091A2AB /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		1766586E24E09EE500B51C9D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		17EE54CE24DEA4D0008566B1 /* HappyDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EE54D124DEA4D0008566B1 /* HappyDaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyDaysApp.swift; sourceTree = "<group>"; };
 		17EE54D324DEA4D0008566B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		17EE54C524DEA4D0008566B1 = {
 			isa = PBXGroup;
 			children = (
+				1766586E24E09EE500B51C9D /* README.md */,
 				17EE54D024DEA4D0008566B1 /* HappyDays */,
 				17EE54CF24DEA4D0008566B1 /* Products */,
 			);
