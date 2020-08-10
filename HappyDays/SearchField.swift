@@ -12,6 +12,8 @@ struct SearchField: View {
 
     @Binding public var isEditing : Bool
 
+    let onCommit: () -> Void
+
     var body: some View {
         HStack(spacing: 0) {
             HStack(spacing: 0) {
@@ -22,7 +24,7 @@ struct SearchField: View {
                     .accessibility(identifier: "magnifyingGlass")
                     .accessibility(hidden: true)
 
-                TextField("Search", text: $searchText)
+                TextField("Search", text: $searchText, onCommit: onCommit)
                     .padding(.horizontal, 4)
                     .padding(.vertical, 7)
                     .disableAutocorrection(true)
@@ -93,7 +95,8 @@ struct SearchField_Previews: PreviewProvider {
         var body: some View {
             VStack {
                 SearchField(searchText: $query,
-                            isEditing: $edit)
+                            isEditing: $edit,
+                            onCommit: {})
                     .padding()
 
                 Button(action: {

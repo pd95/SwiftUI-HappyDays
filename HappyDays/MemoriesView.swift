@@ -14,27 +14,41 @@ struct MemoriesView: View {
     @State private var addPhoto: Bool = false
     @State private var selectedPhoto: UIImage?
 
-    @State private var isSearching: Bool = false
-    @State private var searchText: String = ""
-
     var body: some View {
         ScrollView {
             Section {
-                SearchField(searchText: $searchText, isEditing: $isSearching)
+                SearchField(searchText: $viewModel.searchText, isEditing: $viewModel.isSearching,
+                            onCommit: {
+                                viewModel.filterMemories(text: viewModel.searchText)
+                            })
                     .padding()
             }
             Section {
                 LazyVGrid(columns: [GridItem(.fixed(200))],
                           alignment: .center,
                           spacing: 20, pinnedViews: [.sectionHeaders]) {
-                    ForEach(viewModel.memories, id: \.baseUrl) { memory in
-                        MemoryCell(memory: memory)
+                    ForEach(viewModel.filteredMemories, id: \.baseUrl) { memory in
+                        MemoryCell(memory: memory, isRecording: viewModel.isRecording(memory))
+                            .onTapGesture() {
+                                viewModel.playAudio(for: memory)
+                            }
+                            .gesture(
+                                LongPressGesture(minimumDuration: 0.25, maximumDistance: 0)
+                                    .onEnded({ x in
+                                        viewModel.record(memory: memory)
+                                    })
+                                    .sequenced(before: DragGesture(minimumDistance: 0)
+                                                .onEnded({ x in
+                                                    viewModel.finishRecording(success: true)
+                                                })
+                                    )
+                            )
                     }
                 }
                 .padding(.horizontal)
             }
         }
-        .background(Color("GridViewBackground"))
+        .background(viewModel.isRecording ? Color.red : Color("GridViewBackground"))
         .navigationBarTitle("Happy Days", displayMode: .inline)
         .navigationBarItems(trailing: Button(action: { addPhoto.toggle() }, label: {
             Image(systemName: "plus")
@@ -57,13 +71,19 @@ struct MemoriesView: View {
 
 struct MemoryCell: View {
     let memory: Memory
+    let isRecording: Bool
 
     var body: some View {
-        Image(uiImage: UIImage(contentsOfFile: memory.thumbnailURL.path)!)
+        Image(uiImage: UIImage(contentsOfFile: memory.thumbnailURL.path) ?? UIImage())
             .resizable()
             .scaledToFill()
-        .frame(width: 200, height: 200, alignment: .center)
-        .clipped()
+            .frame(width: 200, height: 200, alignment: .center)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(style: StrokeStyle(lineWidth: 3))
+                    .foregroundColor(isRecording ? Color.white : Color.clear)
+            )
     }
 }
 
